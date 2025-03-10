@@ -173,8 +173,8 @@
 
 
  footer{
-    position: absolute;
-    margin-top: 382rem;
+    /* position: relative;
+    margin-bottom: 2rem; */
     width: 100%;
     text-align: center;
     background-color: aqua;

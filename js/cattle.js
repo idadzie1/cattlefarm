@@ -265,10 +265,34 @@ const dataArray = [
 
     {
         id: 31,
-        color: "White",
+        color: "White",        
         Dob: null,
         photo: "./cattlephotos/31FemaleWhiteCalf.jpeg",
         sex: "Female"                
+    },
+
+    {
+        id: 32,
+        color: "Brown",
+        Dob: null,
+        photo: "./cattlephotos/32MFBrownCalf.jpeg",
+        sex: null,
+    },
+
+    {
+        id: 33,
+        color: "White",
+        Dob: null,
+        photo: "./cattlephotos/33MFWhiteCalf.jpeg",
+        sex: null,
+    },
+
+    {
+        id: 34,
+        color: "White/Brown",
+        Dob: null,
+        photo: "./cattlephotos/34MFWhiteBrownCalf.jpeg",
+        sex: null
     }
 
 ];
@@ -315,7 +339,8 @@ dataArray.forEach(obj=>{
     const dobDisplay = obj.Dob ? `${obj.Dob.getFullYear()}, ${monthNames[obj.Dob.getMonth()]}` : 'N/A';
     const ageDisplay = obj.Dob ? ageCalculation(obj.Dob) : 'N/A';
     const iddisplay = obj.id ? `${obj.id}`: `n/a`;
-     
+    const sexDisplay = obj.sex ? `${obj.sex}` : `n/a`;
+
     const mainGalleryHTML = `
     <div class="gallery-item">
         <div class="photo">
@@ -328,7 +353,7 @@ dataArray.forEach(obj=>{
             <span class="age">Age: ${ageDisplay}</span>
             <span class="color">Color: ${obj.color}</span>
             <span class="ID">ID: ${iddisplay}</span>
-            <span class="sex">${obj.sex}</span>
+            <span class="sex">${sexDisplay}</span>
         </div>
 </div>`
 
